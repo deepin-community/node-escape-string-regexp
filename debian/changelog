@@ -1,0 +1,46 @@
+node-escape-string-regexp (4.0.0-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Update Vcs-* headers from URL redirect.
+  * Use canonical URL in Vcs-Git.
+  * Remove obsolete field Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Change section to javascript
+  * Neww upstream version 4.0.0
+  * Use pkg-js-tools auto install
+  * Enable upstream test using tape instead of ava
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 14 May 2020 10:51:28 +0200
+
+node-escape-string-regexp (1.0.5-1) unstable; urgency=medium
+
+  [ Bas Couwenberg ]
+  * Remove myself from Uploaders.
+
+  [ Mathias Behrle ]
+  * Imported Upstream version 1.0.5
+  * Updating the debian packaging for the new version.
+  * Removing XS-Testsuite, no more needed.
+  * Using secure URIs in the VCS fields.
+  * Adding myself as uploader.
+  * Adding myself to debian copyright.
+  * Updating to Standards-Version 3.8, no changes needed.
+  * Running wrap-and-sort -sta.
+  * (Re-)Uploading to unstable (Closes: #780876).
+
+ -- Mathias Behrle <mbehrle@debian.org>  Mon, 18 Jul 2016 13:42:48 +0200
+
+node-escape-string-regexp (1.0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #780876)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Fri, 27 Mar 2015 16:17:07 +0100

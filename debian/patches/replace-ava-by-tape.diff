@@ -1,0 +1,38 @@
+Description: replace ava by tape in test
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-05-14
+
+--- a/test.js
++++ b/test.js
+@@ -1,11 +1,12 @@
+-import test from 'ava';
+-import escapeStringRegexp from '.';
++const test = require('tape');
++const escapeStringRegexp = require('.');
+ 
+ test('main', t => {
+ 	t.is(
+ 		escapeStringRegexp('\\ ^ $ * + ? . ( ) | { } [ ]'),
+ 		'\\\\ \\^ \\$ \\* \\+ \\? \\. \\( \\) \\| \\{ \\} \\[ \\]'
+ 	);
++    t.end();
+ });
+ 
+ test('escapes `-` in a way compatible with PCRE', t => {
+@@ -13,11 +14,12 @@
+ 		escapeStringRegexp('foo - bar'),
+ 		'foo \\x2d bar'
+ 	);
++    t.end();
+ });
+ 
+ test('escapes `-` in a way compatible with the Unicode flag', t => {
+-	t.regex(
+-		'-',
+-		new RegExp(escapeStringRegexp('-'), 'u')
++	t.ok(
++		'-'.match( new RegExp(escapeStringRegexp('-'), 'u') )
+ 	);
++    t.end();
+ });
