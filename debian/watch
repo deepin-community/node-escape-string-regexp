@@ -1,6 +1,6 @@
-version=3
+version=4
 opts=\
-dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-escape-string-regexp-$1.tar.gz/ \
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-escape-string-regexp-$1/ \
 https://github.com/sindresorhus/escape-string-regexp/tags \
-.*/archive/v?([\d\.]+).tar.gz
+.*?(\d[\d\.]*)@ARCHIVE_EXT@
